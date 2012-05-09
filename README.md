@@ -173,7 +173,7 @@ burnout
 
 ## Non-Sauce Labs Environments
 
-Burnout also accepts
+Burnout also accepts a custom hostname and port for your local environment:
 
 ```javascript
 burnout
