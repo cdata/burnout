@@ -19,23 +19,23 @@ var burnout = require('burnout'),
     assert = require('assert'); // Your assertion utility of choice here
 
 burnout
-    .initialize({ 
-        name: "CloudFlare - Rocket Loader Optimization" // Test name
-    })
+    .initialize({ 
+        name: "CloudFlare - Rocket Loader Optimization" // Test name
+    })
     // Start chaining commands..
     .eval("document.title", function(title) {
-    
+
         assert(title == '');
     })
     // Chained commands are guaranteed to run synchronously
-    .elementByCss("#NextPageLink", function(link) {
+    .elementByCss("#NextPageLink", function(link) {
 
         // The context of callbacks can be used to promise sub-commands
-        return this.moveTo(link, 2, 2, function() {
+        return this.moveTo(link, 2, 2, function() {
 
-            return this.click(link)
-        });
-    })
+            return this.click(link)
+        });
+    })
     // End the test. Status automatically posted to Sauce Labs.
     .quit();
 ```
