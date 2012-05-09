@@ -22,15 +22,18 @@ burnout
     .initialize({ 
         name: "CloudFlare - Rocket Loader Optimization" // Test name
     })
-    // Start chaining commands..
+    // Callbacks are optional..
+    .get("http://www.google.com/")
+    // Commands can be chained..
     .eval("document.title", function(title) {
 
-        assert(title == '');
+        // Failed assertions will stop the test on a per-browser basis..
+        assert(title == 'Google');
     })
-    // Chained commands are guaranteed to run synchronously
+    // Chained commands are guaranteed to run synchronously..
     .elementByCss("#NextPageLink", function(link) {
 
-        // The context of callbacks can be used to promise sub-commands
+        // The context of callbacks can be used to promise sub-commands..
         return this.moveTo(link, 2, 2, function() {
 
             return this.click(link)
