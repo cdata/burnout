@@ -1,0 +1,19 @@
+{
+  "author": "Chris Joel <chris@scriptolo.gy> (http://scriptolo.gy)",
+  "name": "burnout",
+  "description": "Burnout is a asynchronous, chainable Selenium 2 WebDriver interface.",
+  "version": "0.0.1",
+  "main": "./lib/burnout.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cdata/burnout.git"
+  },
+  "dependencies": {
+    "q": "~0.8",
+    "wd": "0.0.12",
+    "request": "~2.9"
+  },
+  "engines": {
+    "node": "~0.6"
+  }
+}
