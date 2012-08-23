@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/cdata/burnout.png)](http://travis-ci.org/cdata/burnout)
 # Burnout
 
 Burnout is an asynchronous, chainable and DRY interface for building Selenium 2 WebDriver scripts in Node. It was written primarily for interfacing with Sauce Labs, but it should work with most Selenium 2 setups. Burnout builds on top of the excellent Selenium 2 WebDriver library [wd][1].
